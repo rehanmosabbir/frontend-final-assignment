@@ -150,8 +150,12 @@
               <p>Photos</p>
             </div>
           </section>
-          <section class="message-box">
-            <div class="message">
+          <section id="message-box" class="message-box">
+            <div
+              class="message"
+              id="message-details"
+              style="visibility: hidden"
+            >
               <div>
                 <img src="img/mosabbir_photo.jpg" alt="" />
               </div>
@@ -165,12 +169,21 @@
                 </p>
               </div>
             </div>
-            <div class="typing">
-              <small>Saifuddin is typing...</small>
+            <div class="typing" id="typing">
+              <div class="typing-indicator">
+                <small>Saifuddin is typing</small>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
             <div class="typing-box">
-              <input type="text" placeholder="Write your message here" />
-              <button type="button">
+              <input
+                type="text"
+                id="message"
+                placeholder="Write your message here"
+              />
+              <button type="button" id="send">
                 Send
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -193,5 +206,6 @@
       src="https://kit.fontawesome.com/0f5380209f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 .message-box {
   padding: 40px;
   overflow-y: scroll;
-  /* height: 80vh; */
+  height: 80vh;
 }
 
 .messages-user p {
@@ -45,7 +47,8 @@ body {
   margin-right: 10px;
 }
 .user-info img,
-.message img {
+.message img,
+.message-user img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -53,7 +56,6 @@ body {
 
 .logo-box {
   width: 5%;
-  /* border: 1px solid red; */
 }
 
 .header {
@@ -95,7 +97,7 @@ body {
 
 .message {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .sidebar {
@@ -151,4 +153,57 @@ button {
   color: #fff;
   background-color: #6b0f99;
   font-weight: 700;
+}
+
+.typing {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.message-user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.typing-indicator span {
+  width: 5px;
+  height: 5px;
+  background-color: #222;
+  border-radius: 50%;
+  margin-right: 5px;
+  animation: dot-animation 1.5s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 1s;
+}
+.typing-indicator small {
+  margin-right: 5px;
+}
+@keyframes dot-animation {
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: scale(1);
+    background-color: #222;
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: #999;
+  }
 }
