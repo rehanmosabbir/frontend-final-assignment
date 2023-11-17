@@ -1,5 +1,10 @@
 "use strict";
 
+function scrollToBottomOfElement() {
+  const element = document.getElementById("message-box");
+  element.scrollTop = element.scrollHeight;
+}
+
 const messages = [
   "Hello",
   "Hi",
@@ -35,6 +40,7 @@ sendBtnEl.addEventListener("click", () => {
               
             </div>`
   );
+  scrollToBottomOfElement();
   messageEl.value = "";
   setTimeout(() => {
     const tickEl = document.getElementById(`${id}`);
@@ -65,5 +71,6 @@ sendBtnEl.addEventListener("click", () => {
     );
     document.getElementById("typing").classList.remove("show");
     document.getElementById("typing").classList.add("typing");
+    scrollToBottomOfElement();
   }, 6000);
 });
