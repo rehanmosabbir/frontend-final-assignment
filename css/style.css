@@ -16,6 +16,10 @@ body {
 .logo {
   font-size: 45px;
 }
+.logo-box {
+  margin-left: 10px;
+  width: 5%;
+}
 
 .logo-box svg {
   color: #f6e5ff;
@@ -54,10 +58,6 @@ body {
   border-radius: 50%;
 }
 
-.logo-box {
-  width: 5%;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@ body {
 .photos {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   border-bottom: 1px solid gray;
 }
 
@@ -104,20 +104,27 @@ body {
   background-color: #f6f6f6;
   height: 80vh;
   width: 20%;
-  margin-left: 25px;
+  margin-left: 33px;
   border: 1px solid gray;
 }
 
 .mini-sidebar {
   width: 5%;
   height: 80vh;
-  padding-left: 20px;
+  padding-left: 30px;
+  padding-top: 20px;
+  position: relative;
 }
 
 .mini-sidebar-icons svg,
 .expand svg {
-  margin-bottom: 20px;
-  font-size: 30px;
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.expand svg {
+  position: absolute;
+  bottom: 0;
 }
 
 .message-info p {
