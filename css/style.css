@@ -244,4 +244,11 @@ button {
   .message-user img {
     display: none;
   }
+  .messages-user p {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .message-box {
+    padding-left: 60px;
+  }
 }

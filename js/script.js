@@ -121,7 +121,7 @@ if (!isTyping) {
   setTimeout(() => {
     document.getElementById("typing").classList.remove("show");
     document.getElementById("typing").classList.add("typing");
-  }, 5000);
+  }, 10000);
   setTimeout(() => {
     const randomNumber = Math.floor(Math.random() * 10);
     messageDetailsEl.insertAdjacentHTML(
@@ -140,7 +140,7 @@ if (!isTyping) {
     );
 
     scrollToBottomOfElement();
-  }, 5000);
+  }, 10000);
   count++;
   if (count === 3) isTyping = true;
 }
