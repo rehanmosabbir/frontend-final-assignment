@@ -21,7 +21,11 @@ const messages = [
 const messageEl = document.getElementById("message");
 const sendBtnEl = document.getElementById("send");
 const messageDetailsEl = document.getElementById("message-details");
+
+let isTyping = false;
+
 sendBtnEl.addEventListener("click", () => {
+  isTyping = true;
   const randomId = Math.floor(Math.random() * 100);
   const id = `tick-${randomId}`;
   messageDetailsEl.insertAdjacentHTML(
@@ -73,4 +77,70 @@ sendBtnEl.addEventListener("click", () => {
     document.getElementById("typing").classList.add("typing");
     scrollToBottomOfElement();
   }, 6000);
+  setTimeout(() => {
+    isTyping = false;
+    if (!isTyping) {
+      let count = 0;
+      setTimeout(() => {
+        document.getElementById("typing").classList.add("show");
+      }, 2000);
+      setTimeout(() => {
+        document.getElementById("typing").classList.remove("show");
+        document.getElementById("typing").classList.add("typing");
+      }, 5000);
+      setTimeout(() => {
+        const randomNumber = Math.floor(Math.random() * 10);
+        messageDetailsEl.insertAdjacentHTML(
+          "beforebegin",
+          `<div class="message">
+              <div>
+                <img src="img/mosabbir_photo.jpg" alt="" />
+              </div>  
+              <div class="message-info">
+                <small>Saifuddin</small>
+                <p>
+                  ${messages[randomNumber]} 
+                </p> 
+              </div>
+            </div>`
+        );
+
+        scrollToBottomOfElement();
+      }, 5000);
+      count++;
+      if (count === 3) isTyping = true;
+    }
+  }, 10000);
 });
+
+if (!isTyping) {
+  let count = 0;
+  setTimeout(() => {
+    document.getElementById("typing").classList.add("show");
+  }, 2000);
+  setTimeout(() => {
+    document.getElementById("typing").classList.remove("show");
+    document.getElementById("typing").classList.add("typing");
+  }, 5000);
+  setTimeout(() => {
+    const randomNumber = Math.floor(Math.random() * 10);
+    messageDetailsEl.insertAdjacentHTML(
+      "beforebegin",
+      `<div class="message">
+              <div>
+                <img src="img/mosabbir_photo.jpg" alt="" />
+              </div>  
+              <div class="message-info">
+                <small>Saifuddin</small>
+                <p>
+                  ${messages[randomNumber]} 
+                </p> 
+              </div>
+            </div>`
+    );
+
+    scrollToBottomOfElement();
+  }, 5000);
+  count++;
+  if (count === 3) isTyping = true;
+}

@@ -231,4 +231,14 @@ button {
     justify-content: flex-start;
     margin-left: 50px;
   }
+
+  .user-info img {
+    margin-left: 20px;
+  }
+  .user-info p {
+    display: none;
+  }
+  .user-info svg {
+    display: none;
+  }
 }
