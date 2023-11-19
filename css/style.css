@@ -241,4 +241,7 @@ button {
   .user-info svg {
     display: none;
   }
+  .message-user img {
+    display: none;
+  }
 }

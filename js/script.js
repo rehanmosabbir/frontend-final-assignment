@@ -33,7 +33,7 @@ sendBtnEl.addEventListener("click", () => {
     `<div class="message-user">
               <div class="message-info">
                 <small>Mosabbir</small>
-                <p>
+                <p style="background-color: #FDF5F2">
                   ${messageEl.value} 
                 </p> 
               </div>
